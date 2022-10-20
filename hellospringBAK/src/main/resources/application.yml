@@ -1,0 +1,6 @@
+# application.yml
+spring:
+  cloud:
+    config:
+      import-check:
+        enabled: false
