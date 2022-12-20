@@ -1,6 +1,0 @@
-# bootstrap.yml
-spring:
-  cloud:
-    config:
-      enabled: false #true
-      #uri: http://localhost:9296
