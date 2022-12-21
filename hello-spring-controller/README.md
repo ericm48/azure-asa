@@ -7,39 +7,47 @@ Azure Spring Apps Enterprise Projects
 
 ## Setup Commands:
 
-Login to Azure with cli.
+Login to Azure with cli:
 ```
 az login
 ```
 
-Verify correct account.
+Verify correct account:
 ```
 az account list
 ```
 
-Verify correct subscription.
+Verify correct subscription:
 ```
 az account set --subscription ...
 ```
 
-Create a group (run in background).
+Set defaults:
+```
+. ../sh/setup-env-variables.sh
+```
+
+Create the group:
 ```
 az group create --location westus --resource-group azure-asa-uswest &
 ```
 
-Create a group (in background).
+Verify the group:
 ```
-az group create --location westus --resource-group azure-asa-uswest &
+az group list
 ```
 
-Create app within the service-instance (in background)  Note: Takes 10-15min to complete.
+Create app within the service-instance. Note: Takes 10-15min to complete:
 ```
 az spring app create -n hello-spring-controller -s hello-spring-controller-ent \
 	 -g azure-asa-uswest --assign-endpoint true --runtime-version=Java_11  \
 	 --verbose &
 ```
 
-
+Verify the app:
+```
+az spring app list  -s hello-spring-controller-ent -g azure-asa-uswest
+```
 
 
 
@@ -49,20 +57,32 @@ az spring app create -n hello-spring-controller -s hello-spring-controller-ent \
 
 ## Demo Commands:
 
-Login to Azure with cli.
+Login to Azure with cli:
 ```
 az login
 ```
 
-Verify correct account.
+Goto proper directory:
 ```
-az account list
+cd ./hello-spring-controller
 ```
 
-Verify correct subscription.
+Set defaults:
 ```
-az account set --subscription ...
+. ../sh/setup-env-variables.sh
 ```
+
+Invoke maven build:
+```
+m3ast
+```
+or
+
+```
+mvn clean install
+```
+
+
 
 
 
