@@ -80,7 +80,9 @@ mvn clean install
 
 Deploy the app [basic]:
 ```
-az spring app deploy -n hello-spring-controller -s hello-spring-controller-basic -g azure-asa-uswest --artifact-path ./target/hello-spring-controller-0.0.1-SNAPSHOT.jar --verbose  &
+az spring app deploy -n hello-spring-controller -s hello-spring-controller-basic \
+   -g azure-asa-uswest --artifact-path ./target/hello-spring-controller-0.0.1-SNAPSHOT.jar \
+   --verbose  &
 ```
 
 Get logs [basic]:
