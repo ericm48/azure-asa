@@ -1,16 +1,24 @@
-# Ericm48 Azure
 
-Welcome to the hello-spring-controller project!
+# Welcome to the hello-spring-controller project!
 
 Azure Spring Apps Enterprise Projects
 
 
 
-## Commands:
+## Setup Commands:
 
 
+## Demo Commands:
 
+Login to Azure with cli.
+```
+	az login
+```
 
+Verify correct account.
+```
+	az account list
+```
 
 
 ## Notes:
