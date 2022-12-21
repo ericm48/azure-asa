@@ -24,7 +24,7 @@ az account set --subscription ...
 
 Set defaults:
 ```
-. ../sh/setup-env-variables.sh
+. ../sh/setup-env-variables-basic.sh
 ```
 
 Create the group:
@@ -37,9 +37,9 @@ Verify the group:
 az group list
 ```
 
-Create app within the service-instance. Note: Takes 10-15min to complete:
+Create app within the service-instance [basic]. Note: Takes 10-15min to complete:
 ```
-az spring app create -n hello-spring-controller -s hello-spring-controller-ent \
+az spring app create -n hello-spring-controller -s hello-spring-controller-basic \
 	 -g azure-asa-uswest --assign-endpoint true --runtime-version=Java_11  \
 	 --verbose &
 ```
