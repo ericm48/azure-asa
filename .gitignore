@@ -166,6 +166,12 @@ _ReSharper*/
 *.[Rr]e[Ss]harper
 
 ##############
+# dotNet
+##############
+deploy.zip
+
+
+##############
 # TeamCity is a build add-in
 ##############
 _TeamCity*

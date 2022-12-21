@@ -1,9 +1,8 @@
 # Ericm48 Azure
 
-Welcome to the hello-spring-controller project!
+Welcome to the hello-steel-controller-basic project!
 
 Azure Spring Apps Enterprise Projects
-
 
 
 ## Commands:
@@ -14,7 +13,6 @@ Azure Spring Apps Enterprise Projects
 
 
 ## Notes:
-
 
 
 
