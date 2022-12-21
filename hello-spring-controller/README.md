@@ -3,7 +3,9 @@
 
 Azure Spring Apps Enterprise Projects
 
-
+Please note:
+-Several commands are run in the background using the '&'.  You may wish to NOT do this.
+Just be aware of what you are doing.
 
 ## Setup Commands:
 
@@ -46,14 +48,8 @@ az spring app create -n hello-spring-controller -s hello-spring-controller-basic
 
 Verify the app:
 ```
-az spring app list  -s hello-spring-controller-ent -g azure-asa-uswest
+az spring app list  -s hello-spring-controller-basic -g azure-asa-uswest
 ```
-
-
-
-
-
-
 
 ## Demo Commands:
 
@@ -69,7 +65,7 @@ cd ./hello-spring-controller
 
 Set defaults:
 ```
-. ../sh/setup-env-variables.sh
+. ../sh/setup-env-variables-basic.sh
 ```
 
 Invoke maven build:
@@ -82,10 +78,25 @@ or
 mvn clean install
 ```
 
+Deploy the app [basic]:
+```
+az spring app deploy -n hello-spring-controller -s hello-spring-controller-basic -g azure-asa-uswest --artifact-path ./target/hello-spring-controller-0.0.1-SNAPSHOT.jar --verbose  &
+```
 
+Get logs [basic]:
+```
+az spring app logs -n hello-spring-controller -s hello-spring-controller-basic -g azure-asa-uswest --lines 100 -f
+```
 
+Hit the app [basic]:
 
+```
+https://hello-spring-controller-basic-hello-spring-controller.azuremicroservices.io/
+```
 
+```
+curl -v https://hello-spring-controller-basic-hello-spring-controller.azuremicroservices.io/
+```
 
 ## Notes:
 
