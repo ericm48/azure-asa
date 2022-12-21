@@ -1,11 +1,13 @@
-# Ericm24 Azure
+# Ericm48 Azure
 
 Welcome to the Azure Git Repo! 
 
-This repo contains artifacts for Java Projects.
+This repo contains artifacts for Azure Spring Apps Projects.
 
 
-## hellospring project 
+## hello-spring-controller project
+
+## hello-steel-controller-basic project 
 
 ## Notes:
 
