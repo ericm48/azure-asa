@@ -82,6 +82,10 @@ Set defaults:
 . ../sh/setup-env-variables-jsb-basic.sh
 ```
 
+```
+. ../sh/setup-env-variables-jsb-ent.sh
+```
+
 Invoke maven build:
 ```
 m3ast
