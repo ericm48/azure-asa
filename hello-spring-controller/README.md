@@ -27,8 +27,14 @@ az account set --subscription ...
 
 Set defaults:
 ```
-. ../sh/setup-env-variables-basic.sh
+. ../sh/setup-env-variables-jsb-basic.sh
 ```
+
+```
+. ../sh/setup-env-variables-jsb-ent.sh
+```
+
+
 
 Create the group:
 ```
