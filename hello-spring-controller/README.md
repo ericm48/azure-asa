@@ -46,7 +46,14 @@ az spring app create -n hello-spring-controller -s hello-spring-controller-basic
 	 --verbose &
 ```
 
-Verify the app:
+Create app within the service-instance [ent]. Note: Takes 10-15min to complete:
+```
+az spring app create -n hello-spring-controller -s hello-spring-controller-ent \
+	 -g azure-asa-uswest --assign-endpoint true \
+	 --verbose &
+```
+
+Verify the app [basic]:
 ```
 az spring app list  -s hello-spring-controller-basic -g azure-asa-uswest
 ```
@@ -65,7 +72,7 @@ cd ./hello-spring-controller
 
 Set defaults:
 ```
-. ../sh/setup-env-variables-basic.sh
+. ../sh/setup-env-variables-jsb-basic.sh
 ```
 
 Invoke maven build:
@@ -85,9 +92,33 @@ az spring app deploy -n hello-spring-controller -s hello-spring-controller-basic
    --verbose  &
 ```
 
+Deploy the app [ent]:
+```
+az spring app deploy -n hello-spring-controller -s hello-spring-controller-ent \
+   -g azure-asa-uswest --artifact-path ./target/hello-spring-controller-0.0.1-SNAPSHOT.jar \
+   --verbose  &
+```
+
+
+List the app [basic]:
+```
+az spring app list  -s hello-spring-controller-basic -g azure-asa-uswest
+```
+
+List the app [ent]:
+```
+az spring app list  -s hello-spring-controller-ent -g azure-asa-uswest
+```
+
+
 Get logs [basic]:
 ```
 az spring app logs -n hello-spring-controller -s hello-spring-controller-basic -g azure-asa-uswest --lines 100 -f
+```
+
+Get logs [ent]:
+```
+az spring app logs -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest --lines 100 -f
 ```
 
 Hit the app [basic]:
@@ -100,11 +131,27 @@ https://hello-spring-controller-basic-hello-spring-controller.azuremicroservices
 curl -v https://hello-spring-controller-basic-hello-spring-controller.azuremicroservices.io/
 ```
 
+
+Hit the app [ent]:
+
+```
+https://hello-spring-controller-ent-hello-spring-controller.azuremicroservices.io/
+```
+
+```
+curl -v https://hello-spring-controller-ent-hello-spring-controller.azuremicroservices.io/
+```
+
+
 Delete the app [basic]:
 ```
 az spring app delete -n hello-spring-controller -s hello-spring-controller-basic -g azure-asa-uswest &
 ```
 
+Delete the app [ent]:
+```
+az spring app delete -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest &
+```
 
 
 ## Notes:
