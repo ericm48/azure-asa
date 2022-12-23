@@ -1,5 +1,6 @@
 using System;
 
+
 namespace hello_steel_controller_basic
 {
     public class WeatherForecast
@@ -11,5 +12,7 @@ namespace hello_steel_controller_basic
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
         public string Summary { get; set; }
+
+        
     }
 }

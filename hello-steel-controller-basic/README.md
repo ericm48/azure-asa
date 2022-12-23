@@ -109,7 +109,7 @@ https://hello-spring-controller-basic-hello-spring-controller.azuremicroservices
 ```
 
 ```
-curl -v https://hello-spring-controller-basic-hello-spring-controller.azuremicroservices.io/
+curl -v https://hello-steel-controller-basic-hello-steel.azuremicroservices.io/weatherforecast
 ```
 
 
