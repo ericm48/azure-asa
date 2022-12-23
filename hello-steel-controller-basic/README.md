@@ -105,7 +105,7 @@ az spring app logs -n hello-steel -s hello-steel-controller-basic -g azure-asa-u
 Hit the app [basic]:
 
 ```
-https://hello-spring-controller-basic-hello-spring-controller.azuremicroservices.io/
+https://hello-spring-controller-basic-hello-spring-controller.azuremicroservices.io/weatherforecast
 ```
 
 ```
