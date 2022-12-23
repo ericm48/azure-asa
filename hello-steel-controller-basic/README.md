@@ -115,7 +115,7 @@ curl -v https://hello-steel-controller-basic-hello-steel.azuremicroservices.io/w
 
 Delete the app [basic]:
 ```
-az spring app delete -n hello-spring-controller -s hello-spring-controller-basic -g azure-asa-uswest &
+az spring app delete -n hello-steel -s hello-steel-controller-basic -g azure-asa-uswest &
 ```
 
 

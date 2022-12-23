@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Azure.SpringCloud.Client;
+using System;
 using System.IO;
 using System.Reflection;
 using log4net;
@@ -18,11 +19,13 @@ namespace hello_world
 
             XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config")); 
 
+            Console.Out.WriteLine("Begins...");
             _log.Info("Begins...");            
 
             CreateHostBuilder(args).Build().Run();
 
             _log.Info("Ends...");            
+            Console.Out.WriteLine("Ends...");           
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
