@@ -86,6 +86,11 @@ Set defaults:
 . ../sh/setup-env-variables-jsb-ent.sh
 ```
 
+From Folder:
+```
+./hello-spring-controller
+```
+
 Invoke maven build:
 ```
 m3ast
