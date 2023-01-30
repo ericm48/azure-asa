@@ -62,15 +62,16 @@ Login to Azure with cli:
 az login
 ```
 
+Set defaults:
+```
+. ./sh/setup-env-variables-cst-basic.sh
+```
+
 Goto proper directory:
 ```
 cd ./hello-steel-controller-basic
 ```
 
-Set defaults:
-```
-. ../sh/setup-env-variables-cst-basic.sh
-```
 
 Invoke dotnet build:
 ```
