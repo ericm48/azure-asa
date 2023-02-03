@@ -24,7 +24,7 @@ public class HelloSpringController
     public String index()
     {
         Log logger = methIDIndex;
-        
+
         String returnValue = "Greetings from Azure Spring Apps: ";
         String dateTime = null;
 
