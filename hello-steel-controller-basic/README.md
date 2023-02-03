@@ -73,7 +73,9 @@ cd ./hello-steel-controller-basic
 ```
 
 Clear Environment Variable: VERSION
-***Please Note:  If you happen to have an environment variable named VERSION set for some other app, there is a good chance the value here is not legit for the dotnet-cli, and will cause it to fail or produce unexpected results.
+
+Please Note:  If you happen to have an environment variable named VERSION set for some other app, there is a good chance the value here is not legit for the dotnet-cli, and will cause it to fail or produce unexpected results.
+
 ```
 unset VERSION
 ```
