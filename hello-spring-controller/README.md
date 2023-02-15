@@ -65,6 +65,12 @@ Verify the app [basic]:
 az spring app list  -s hello-spring-controller-basic -g azure-asa-uswest
 ```
 
+Verify the app [ent]:
+```
+az spring app list  -s hello-spring-controller-ent -g azure-asa-uswest
+```
+
+
 ## Demo Commands:
 
 Login to Azure with cli:
