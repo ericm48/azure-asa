@@ -164,7 +164,6 @@ https://hello-spring-controller-ent-hello-spring-controller.azuremicroservices.i
 curl -v https://hello-spring-controller-ent-hello-spring-controller.azuremicroservices.io/
 ```
 
-
 Delete the app [basic]:
 ```
 az spring app delete -n hello-spring-controller -s hello-spring-controller-basic -g azure-asa-uswest &
