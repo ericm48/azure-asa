@@ -43,18 +43,6 @@ Verify the group:
 az group list
 ```
 
-Create app within the service-instance [basic]. Note: Takes 10-15min to complete:
-```
-az spring-cloud app create -n hello-steel -s hello-steel-controller-basic -g azure-asa-uswest --is-public &
-```
-
-
-Verify the app [basic]:
-```
-az spring app list  -s hello-steel-controller-basic -g azure-asa-uswest
-```
-
-
 ## Demo Commands:
 
 Login to Azure with cli:
@@ -70,6 +58,16 @@ Set defaults:
 Goto proper directory:
 ```
 cd ./hello-steel-controller-basic
+```
+
+Create app within the service-instance [basic]. Note: Takes 10-15min to complete:
+```
+az spring-cloud app create -n hello-steel -s hello-steel-controller-basic -g azure-asa-uswest --is-public &
+```
+
+Verify the app [basic]:
+```
+az spring app list  -s hello-steel-controller-basic -g azure-asa-uswest
 ```
 
 Clear Environment Variable: VERSION

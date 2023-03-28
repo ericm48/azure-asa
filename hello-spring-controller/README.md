@@ -46,30 +46,6 @@ Verify the group:
 az group list
 ```
 
-Create app within the service-instance [basic]. Note: Takes 10-15min to complete:
-```
-az spring app create -n hello-spring-controller -s hello-spring-controller-basic \
-	 -g azure-asa-uswest --assign-endpoint true --runtime-version=Java_11  \
-	 --verbose &
-```
-
-Create app within the service-instance [ent]. Note: Takes 10-15min to complete:
-```
-az spring app create -n hello-spring-controller -s hello-spring-controller-ent \
-	 -g azure-asa-uswest --assign-endpoint true \
-	 --verbose &
-```
-
-Verify the app [basic]:
-```
-az spring app list  -s hello-spring-controller-basic -g azure-asa-uswest
-```
-
-Verify the app [ent]:
-```
-az spring app list  -s hello-spring-controller-ent -g azure-asa-uswest
-```
-
 
 ## Demo Commands:
 
@@ -95,6 +71,30 @@ Set defaults:
 From Folder:
 ```
 ./hello-spring-controller
+```
+
+Create app within the service-instance [basic]. Note: Takes 10-15min to complete:
+```
+az spring app create -n hello-spring-controller -s hello-spring-controller-basic \
+	 -g azure-asa-uswest --assign-endpoint true --runtime-version=Java_11  \
+	 --verbose &
+```
+
+Create app within the service-instance [ent]. Note: Takes 10-15min to complete:
+```
+az spring app create -n hello-spring-controller -s hello-spring-controller-ent \
+	 -g azure-asa-uswest --assign-endpoint true \
+	 --verbose &
+```
+
+Verify the app [basic]:
+```
+az spring app list  -s hello-spring-controller-basic -g azure-asa-uswest
+```
+
+Verify the app [ent]:
+```
+az spring app list  -s hello-spring-controller-ent -g azure-asa-uswest
 ```
 
 Invoke maven build:
