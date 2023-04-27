@@ -19,7 +19,6 @@ public class HelloSpringController
                 + ".index()");
     }
 
-
     @RequestMapping("/")
     public String index()
     {
