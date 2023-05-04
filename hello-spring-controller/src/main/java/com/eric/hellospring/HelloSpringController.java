@@ -28,15 +28,12 @@ public class HelloSpringController
         String dateTime = null;
 
         logger.debug("Begins...");
-        //System.out.println("HelloSpringController.index() Begins...");
 
         dateTime = "No-Date-Ready";
         //dateTime = getCurrentTimeStamp();
 
         returnValue = returnValue + " " + dateTime;
         logger.info("returnValueBe: " + returnValue);
-
-        //System.out.println("HelloSpringController.index() Ends...");
 
         logger.debug("Ends...");
 
