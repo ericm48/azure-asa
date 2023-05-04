@@ -11,18 +11,18 @@ import org.apache.commons.logging.LogFactory;
 @RestController
 public class HelloSpringController
 {
-   private static final Log methIDIndex;
+   private static final Log methIDindex, methIDgetCurrentDateTime;
 
     static
     {
-        methIDIndex = LogFactory.getLog(HelloSpringController.class.getName()
-                + ".index()");
+        methIDindex = LogFactory.getLog(HelloSpringController.class.getName() + ".index()");
+        methIDgetCurrentDateTime = LogFactory.getLog(HelloSpringController.class.getName() + ".getCurrentDateTime()");        
     }
 
     @RequestMapping("/")
     public String index()
     {
-        Log logger = methIDIndex;
+        Log logger = methIDindex;
 
         String returnValue = "Greetings from Azure Spring Apps: ";
         String dateTime = null;
@@ -30,7 +30,7 @@ public class HelloSpringController
         logger.debug("Begins...");
 
         dateTime = "No-Date-Ready";
-        //dateTime = getCurrentTimeStamp();
+        //dateTime = getCurrentDateTime();
 
         returnValue = returnValue + " " + dateTime;
         logger.info("returnValueBe: " + returnValue);
@@ -39,8 +39,18 @@ public class HelloSpringController
 
         return (returnValue);
     }
-    public String getCurrentTimeStamp()
+
+    public String getCurrentDateTime()
     {
-        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
+        Log logger = methIDgetCurrentDateTime;
+        String returnValue = null;
+
+        logger.debug("Begins...");
+
+        returnValue = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
+
+        logger.debug("Ends...");
+
+        return( returnValue );
     }
 }
