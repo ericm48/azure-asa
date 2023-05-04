@@ -4,7 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.UUID;
 
-@Entity(name = "CUSTOMER_PROFILE")
+//@Entity(name = "CUSTOMER_PROFILE")
+
+@Entity(name = "customer_profile")
 public class CustomerProfileEntity {
 
     @Id
