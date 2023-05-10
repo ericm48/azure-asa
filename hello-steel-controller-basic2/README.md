@@ -52,7 +52,7 @@ az login
 
 Set defaults:
 ```
-. ./sh/setup-env-variables-cst-basic.sh
+. ../sh/setup-env-variables-cst-basic.sh
 ```
 
 Goto proper directory:
