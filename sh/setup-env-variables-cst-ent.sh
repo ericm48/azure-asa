@@ -8,3 +8,7 @@ export REGION='westus'	 												                         	# choose a region 
 export CUSTOM_BUILDER=
 export CUSTOM_BUILDER='no-bindings-builder'
 
+env |grep -i SPRING
+
+az configure --defaults group=${RESOURCE_GROUP} location=${REGION} spring=${SPRING_APPS_SERVICE} &
+
