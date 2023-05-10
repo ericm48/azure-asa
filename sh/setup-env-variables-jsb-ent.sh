@@ -6,3 +6,5 @@ export REGION='westus'	 												                         	# choose a region 
 
 
 env |grep -i SPRING
+
+az configure --defaults group=${RESOURCE_GROUP} location=${REGION} spring=${SPRING_APPS_SERVICE} &

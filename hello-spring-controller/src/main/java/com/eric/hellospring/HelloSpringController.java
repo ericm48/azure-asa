@@ -15,8 +15,8 @@ public class HelloSpringController
 
     static
     {
-        methIDindex = LogFactory.getLog(HelloSpringController.class.getName() + ".index()");
-        methIDgetCurrentDateTime = LogFactory.getLog(HelloSpringController.class.getName() + ".getCurrentDateTime()");        
+        methIDindex                 = LogFactory.getLog(HelloSpringController.class.getName() + ".index()");
+        methIDgetCurrentDateTime    = LogFactory.getLog(HelloSpringController.class.getName() + ".getCurrentDateTime()");
     }
 
     @RequestMapping("/")
