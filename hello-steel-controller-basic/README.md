@@ -52,7 +52,7 @@ az login
 
 Set defaults:
 ```
-. ./sh/setup-env-variables-cst-basic.sh
+. ../sh/setup-env-variables-cst-basic.sh
 ```
 
 Goto proper directory:
@@ -93,7 +93,8 @@ Deploy the app [basic]:
 ```
 az spring-cloud app deploy -n hello-steel -s hello-steel-controller-basic \
    -g azure-asa-uswest --runtime-version NetCore_31 --main-entry hello-steel-controller-basic.dll \
-   --artifact-path ./deploy.zip &
+   --artifact-path ./deploy.zip \
+   --verbose &
 ```
 
 List the app [basic]:
