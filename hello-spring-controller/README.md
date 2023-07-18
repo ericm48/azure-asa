@@ -83,9 +83,10 @@ mvn clean install
 
 Deploy the app [ent]:
 ```
-az spring app deploy -n hello-spring-controller -s hello-spring-controller-ent \
-   -g azure-asa-uswest --artifact-path ./target/hello-spring-controller-0.0.1-SNAPSHOT.jar \
-   --verbose  &
+az spring app deploy -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest \
+   --artifact-path ./target/hello-spring-controller-0.0.1-SNAPSHOT.jar \
+	 --build-env BP_JVM_VERSION=17 \
+   --verbose  &	
 ```
 
 List the app [ent]:
@@ -101,11 +102,11 @@ az spring app logs -n hello-spring-controller -s hello-spring-controller-ent -g 
 Hit the app [ent]:
 
 ```
-https://hello-spring-controller-ent-hello-spring-controller.azuremicroservices.io/
+https://hello-spring-controller-ent-hello-spring-controller.azuremicroservices.io/showDateTime
 ```
 
 ```
-curl -v https://hello-spring-controller-ent-hello-spring-controller.azuremicroservices.io/
+curl -v https://hello-spring-controller-ent-hello-spring-controller.azuremicroservices.io/showDateTime
 ```
 
 Scale the app [ent]:

@@ -11,26 +11,26 @@ import org.apache.commons.logging.LogFactory;
 @RestController
 public class HelloSpringController
 {
-   private static final Log methIDindex, methIDgetCurrentDateTime;
+   private static final Log methIDshowDateTime, methIDgetCurrentDateTime;
 
     static
     {
-        methIDindex                 = LogFactory.getLog(HelloSpringController.class.getName() + ".index()");
+        methIDshowDateTime          = LogFactory.getLog(HelloSpringController.class.getName() + ".showDateTime()");
         methIDgetCurrentDateTime    = LogFactory.getLog(HelloSpringController.class.getName() + ".getCurrentDateTime()");
     }
 
-    @RequestMapping("/")
-    public String index()
+    @RequestMapping("/showDateTime")
+    public String showDateTime()
     {
-        Log logger = methIDindex;
+        Log logger = methIDshowDateTime;
 
         String returnValue = "Greetings from Azure Spring Apps: ";
         String dateTime = null;
 
         logger.debug("Begins...");
 
-        dateTime = "No-Date-Ready";
-        //dateTime = getCurrentDateTime();
+        dateTime = "No-DateTime-Ready";
+       // dateTime = getCurrentDateTime();
 
         returnValue = returnValue + " " + dateTime;
         logger.info("returnValueBe: " + returnValue);
