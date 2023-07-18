@@ -1,0 +1,13 @@
+#
+# application.yml
+#
+
+# For later
+#spring:
+#  config:
+#    import: "optional:configserver:"
+
+#  cloud:
+#    config:
+#      import-check:
+#        enabled: false
