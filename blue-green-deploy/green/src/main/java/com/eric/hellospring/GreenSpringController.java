@@ -1,4 +1,4 @@
-package com.molw.greenspring;
+package com.eric.hellospring;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
