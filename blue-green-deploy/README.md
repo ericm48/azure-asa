@@ -52,7 +52,7 @@ az login
 
 Goto proper directory:
 ```
-cd ./blue-green-deplo
+cd ./blue-green-deploy
 ```
 
 Set defaults:
