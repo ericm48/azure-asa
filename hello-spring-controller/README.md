@@ -85,7 +85,7 @@ Deploy the app [ent]:
 ```
 az spring app deploy -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest \
    --artifact-path ./target/hello-spring-controller-0.0.1-SNAPSHOT.jar \
-	 --build-env BP_JVM_VERSION=17 \
+   --build-env BP_JVM_VERSION=17 \
    --verbose  &	
 ```
 
