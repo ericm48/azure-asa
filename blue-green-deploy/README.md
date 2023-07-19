@@ -112,19 +112,20 @@ cd ..
 
 Deploy Green App:
 ```
-cd green
+cd ../green
 ```
 
 ```
-az spring app deploy -n green-spring-controller -s demo-blue-green-ent -g azure-asa-uswest \
-   --artifact-path ./target/hello-spring-controller-0.0.1-SNAPSHOT.jar \
+az spring app deployment create -n green-spring-controller -s demo-blue-green-ent -g azure-asa-uswest \
+   --app app-cyan \
+   --artifact-path ./target/green-spring-controller-0.0.1-SNAPSHOT.jar \
    --build-env BP_JVM_VERSION=17 \
-   --verbose  & 
+   --verbose &
 ```
 
 Deploy Blue App:
 ```
-cd blue
+cd ../blue
 ```
 
 
@@ -137,8 +138,8 @@ az spring app deployment create -n blue-dotnet-controller -s demo-blue-green-ent
 
 Make Active Green App:
 ```
-az spring app set-deployment --deployment green-spring-controller \
-   -n app-cyan -s demo-blue-green-ent -g azure-asa-uswest \
+az spring app set-deployment --deployment green-spring-controller -s demo-blue-green-ent -g azure-asa-uswest \
+   --app app-cyan \  
    --verbose &
 ```
 
