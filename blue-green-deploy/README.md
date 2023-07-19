@@ -126,16 +126,16 @@ az spring app deployment create -n blue-dotnet-controller -s demo-blue-green-ent
    --verbose &
 ```
 
-Make Active Blue App:
+Make Active Green App:
 ```
-az spring app set-deployment --deployment blue-dotnet-controller \
+az spring app set-deployment --deployment green-spring-controller \
    -n app-cyan -s demo-blue-green-ent -g azure-asa-uswest \
    --verbose &
 ```
 
-Make Active Green App:
+Make Active Blue App:
 ```
-az spring app set-deployment --deployment green-spring-controller \
+az spring app set-deployment --deployment blue-dotnet-controller \
    -n app-cyan -s demo-blue-green-ent -g azure-asa-uswest \
    --verbose &
 ```
