@@ -113,7 +113,7 @@ cd ..
 Deploy Green App:
 ```
 cd green
-``
+```
 
 ```
 az spring app deploy -n green-spring-controller -s demo-blue-green-ent -g azure-asa-uswest \
