@@ -57,7 +57,7 @@ cd ./blue-green-deploy2
 
 Set defaults:
 ```
-. ../sh/setup-env-variables-bg-ent.sh
+source ../sh/setup-env-variables-bg-ent2.sh
 ```
 
 Create app within the service-instance. Note: Takes 10-15min to complete:
