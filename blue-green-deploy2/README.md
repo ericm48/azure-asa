@@ -97,7 +97,7 @@ mvn clean install
 cd ..
 ```
 
-Build Blue App, Invoke donet build:
+Build Blue App, Invoke maven build:
 ```
 cd blue
 ```
