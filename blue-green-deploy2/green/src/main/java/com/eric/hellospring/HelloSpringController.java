@@ -24,15 +24,17 @@ public class HelloSpringController
     {
         Log logger = methIDshowDateTime;
 
-        String returnValue = "Greetings from Azure Spring Apps: ";
+        String returnValue = "Greetings from Azure Spring Apps! Version: ";
         String dateTime = null;
+
+				String version = "0.0.5-SNAPSHOT";
 
         logger.debug("Begins...");
 
         dateTime = "No-DateTime-Ready";
-        //dateTime = getCurrentDateTime();
+        dateTime = getCurrentDateTime();
 
-        returnValue = returnValue + " " + dateTime;
+        returnValue = returnValue + " " + version + " " + dateTime;
         logger.info("returnValueBe: " + returnValue);
 
         logger.debug("Ends...");
