@@ -69,7 +69,7 @@ az spring app create -n app-cyan2 -s demo-blue-green-ent2 -g azure-asa-uswest \
 
 Verify the app:
 ```
-az spring app list  -s demo-blue-green-ent2 -g azure-asa-uswest
+az spring app list  -s demo-blue-green-ent2 -g azure-asa-uswest -o table
 ```
 
 Delete the DEFAULT deployment [yes you must do this!]: 
