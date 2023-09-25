@@ -140,16 +140,20 @@ az spring app deployment create -n spring-controller-blue -s demo-blue-green-ent
 
 Make Active Green App:
 ```
-az spring app set-deployment --deployment spring-controller-green -s demo-blue-green-ent2 -g azure-asa-uswest \
-   --app app-cyan2 \  
-   --verbose &
+az spring app set-deployment -n app-cyan2 \
+--deployment spring-controller-green \
+-s demo-blue-green-ent2 \
+-g azure-asa-uswest \
+--verbose &
 ```
 
 Make Active Blue App:
 ```
-az spring app set-deployment --deployment spring-controller-blue -s demo-blue-green-ent2 -g azure-asa-uswest \
-   --app app-cyan2 \  
-   --verbose &
+az spring app set-deployment -n app-cyan2 \
+--deployment spring-controller-blue \
+-s demo-blue-green-ent2 \
+-g azure-asa-uswest \
+--verbose &
 ```
 
 Get logs:
