@@ -24,10 +24,10 @@ public class HelloSpringController
     {
         Log logger = methIDshowDateTime;
 
-        String returnValue = "Greetings from Azure Spring Apps! Version: ";
+        String returnValue = "Greetings from Azure Spring Apps! -GREEN- Version: ";
         String dateTime = null;
 
-				String version = "0.0.5-SNAPSHOT";
+        String version = "0.0.7-SNAPSHOT";
 
         logger.debug("Begins...");
 

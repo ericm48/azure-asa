@@ -6,6 +6,7 @@ Azure Spring Apps Enterprise Projects
 Please note:
 * Several commands are run in the background using the '&'.  You may wish to NOT do this.  Just be aware of what you are doing.
 * Below are example commands for the ENTERPRISE Tier.  
+* 25-Sept-2023: This setup has integrated [direnv](https://direnv.net). for managing environment variables & Azure Defaults.  Please see the .envrc file(s), customize to your needs.
 
 
 ## Setup Commands:
@@ -25,7 +26,7 @@ Verify correct subscription:
 az account set --subscription ...
 ```
 
-Set defaults:
+Set defaults (if not using direnv.  Otherwise direnv will set for you):
 ```
 . ../sh/setup-env-variables-jsb-ent.sh
 ```
@@ -54,7 +55,7 @@ Goto proper directory:
 cd ./hello-spring-controller
 ```
 
-Set defaults:
+Set defaults (if not using direnv.  Otherwise direnv will set for you):
 ```
 . ../sh/setup-env-variables-jsb-ent.sh
 ```
@@ -121,7 +122,7 @@ az spring app delete -n hello-spring-controller -s hello-spring-controller-ent -
 
 
 ## Notes:
-
+-25-Sep-2023:  Updated to incorporate direnv.  Tailor the .envrc file to your own settings.
 
 
 
