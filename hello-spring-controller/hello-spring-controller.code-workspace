@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "./"
+		}
+		
+	],
+	"settings": {
+		"java.server.launchMode": "Standard",
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}

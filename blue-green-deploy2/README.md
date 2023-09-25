@@ -8,6 +8,8 @@ This repo contains artifacts for a blue/green deployment using both java-springb
 
 ## Notes:
 - 22-Aug-2023: Initial Implementation.
+* 25-Sept-2023: This setup has integrated [direnv](https://direnv.net). for managing environment variables & Azure Defaults.  Please see the .envrc file(s), customize to your needs.
+
 
 ## Setup Commands:
 
@@ -26,7 +28,7 @@ Verify correct subscription:
 az account set --subscription ...
 ```
 
-Set defaults:
+Set defaults (if not using direnv.  Otherwise direnv will set for you):
 ```
 source ../sh/setup-env-variables-bg-ent2.sh
 ```
@@ -55,7 +57,7 @@ Goto proper directory:
 cd ./blue-green-deploy2
 ```
 
-Set defaults:
+Set defaults (if not using direnv.  Otherwise direnv will set for you):
 ```
 source ../sh/setup-env-variables-bg-ent2.sh
 ```

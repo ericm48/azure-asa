@@ -19,6 +19,7 @@ public class HelloSpringController
         methIDgetCurrentDateTime    = LogFactory.getLog(HelloSpringController.class.getName() + ".getCurrentDateTime()");
     }
 
+    public static final String version = "0.0.5-SNAPSHOT";
     @RequestMapping("/showDateTime")
     public String showDateTime()
     {
@@ -26,8 +27,6 @@ public class HelloSpringController
 
         String returnValue = "Greetings from Azure Spring Apps! -BLUE- Version: ";
         String dateTime = null;
-
-        String version = "0.0.5-SNAPSHOT";
 
         logger.debug("Begins...");
 
