@@ -81,24 +81,6 @@ az spring app deployment delete --app app-cyan2 -n default \
    --verbose &
 ```
 
-Build Green App, Invoke maven build:
-```
-cd green
-```
-
-```
-m3ast
-```
-or
-
-```
-mvn clean install
-```
-
-```
-cd ..
-```
-
 Build Blue App, Invoke maven build:
 ```
 cd blue
@@ -110,6 +92,34 @@ or
 
 ```
 mvn clean install
+```
+
+Build Green App, Invoke maven build:
+```
+cd ../green
+```
+
+```
+m3ast
+```
+or
+
+```
+mvn clean install
+```
+
+
+Deploy Blue App:
+```
+cd ../blue
+```
+
+```
+az spring app deployment create -n spring-controller-blue -s demo-blue-green-ent2 -g azure-asa-uswest \
+   --app app-cyan2 \
+   --artifact-path ./target/hello-spring-controller-blue-0.0.5-SNAPSHOT.jar \
+   --build-env BP_JVM_VERSION=17 \
+   --verbose &
 ```
 
 Deploy Green App:
@@ -125,17 +135,36 @@ az spring app deployment create -n spring-controller-green -s demo-blue-green-en
    --verbose &
 ```
 
-Deploy Blue App:
+Make Active Blue App:
 ```
-cd ../blue
+az spring app set-deployment -n app-cyan2 \
+--deployment spring-controller-blue \
+-s demo-blue-green-ent2 \
+-g azure-asa-uswest \
+--verbose &
+```
+
+Get logs [ Blue ]:
+```
+az spring app logs -n app-cyan2 -s demo-blue-green-ent2 -g azure-asa-uswest --lines 100 -f
+```
+
+Hit the app [default]:
+```
+https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/
+```
+
+Hit the app ReST Endpoint for logging:
+```
+https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/showDateTime
 ```
 
 ```
-az spring app deployment create -n spring-controller-blue -s demo-blue-green-ent2 -g azure-asa-uswest \
-   --app app-cyan2 \
-   --artifact-path ./target/hello-spring-controller-blue-0.0.5-SNAPSHOT.jar \
-   --build-env BP_JVM_VERSION=17 \
-   --verbose &
+curl -v https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/
+```
+
+```
+curl -v https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/showDateTime
 ```
 
 Make Active Green App:
@@ -147,20 +176,15 @@ az spring app set-deployment -n app-cyan2 \
 --verbose &
 ```
 
-Make Active Blue App:
-```
-az spring app set-deployment -n app-cyan2 \
---deployment spring-controller-blue \
--s demo-blue-green-ent2 \
--g azure-asa-uswest \
---verbose &
-```
-
-Get logs:
+Get logs [ Green ]:
 ```
 az spring app logs -n app-cyan2 -s demo-blue-green-ent2 -g azure-asa-uswest --lines 100 -f
 ```
 
+Hit the app ReST Endpoint for logging:
+```
+https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/showDateTime
+```
 
 List the app:
 ```
@@ -172,11 +196,10 @@ Hit the app [default]:
 https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/
 ```
 
-Hit the app ReST Endpoint on Green for logging:
+Hit the app ReST Endpoint for logging:
 ```
 https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/showDateTime
 ```
-
 
 ```
 curl -v https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/
@@ -185,7 +208,6 @@ curl -v https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/
 ```
 curl -v https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/showDateTime
 ```
-
 
 Scale UP the app:
 ```
