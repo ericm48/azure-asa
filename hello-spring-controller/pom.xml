@@ -117,7 +117,7 @@
 				<executions>
 					<execution>
 						<id>Run Script</id>
-						<phase>compile</phase>
+						<phase>initialize</phase>
 						<goals>
 							<goal>exec</goal>
 						</goals>
