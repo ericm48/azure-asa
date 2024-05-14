@@ -29,11 +29,11 @@ usage(){
 	else
 	      echo "\$JAVA_HOME is NOT empty"
 	fi
-    
+
+	pwd    
   cd ${JAVA_HOME}/lib/security  
 
-
-
+	pwd
 
   # MVN Central
 	targetEndpoint='repo.maven.apache.org:443'
@@ -58,4 +58,5 @@ usage(){
 	keytool -delete -storepass changeit -alias nexusazure -keystore cacerts
 	keytool -importcert -storepass changeit -noprompt -trustcacerts -file nexusazurecerts -keystore cacerts -alias nexusazure
 
-
+	cd "$OLDPWD"
+	
