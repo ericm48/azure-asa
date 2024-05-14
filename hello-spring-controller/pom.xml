@@ -24,6 +24,22 @@
 		<maven.compiler.source>20</maven.compiler.source>
 		<maven.compiler.target>20</maven.compiler.target>
 	</properties>
+
+	<repositories>
+
+		<!--
+			https
+		-->
+
+		<repository>
+			<id>spring-commerical</id>
+			<name>spring-commerical</name>
+			<url>https://nexus.azure.csp-si-tiger.net/repository/spring-commerical/</url>
+			<layout>default</layout>
+		</repository>
+
+	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -53,6 +69,19 @@
 			<version>3.1.4</version>
 		</dependency>
 		-->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-jetty11</artifactId>
+			<version>1.10.14</version>
+
+			<!-- SpringCommPatched
+            <version>1.10.14</version>
+            -->
+
+			<!-- Regular Version
+            <version>1.10.13</version>
+            -->
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -83,4 +112,11 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		<repository>
+			<id>releases-nexus</id>
+			<url>https://nexus.azure.csp-si-tiger.net/repository/releases-nexus/</url>
+		</repository>
+
+	</distributionManagement>
 </project>
