@@ -135,10 +135,6 @@ under the License.
 		  <id>releases-nexus</id>
 			<username>${env.AZ_NEXUS_USER}</username>
 			<password>${env.AZ_NEXUS_PASSWORD}</password>
-		  <!--
-	      <username>admin</username>
-	      <password>Nexus4Spring2024</password>
-	      -->
 	    </server>
 
     
