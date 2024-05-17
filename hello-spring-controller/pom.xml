@@ -13,7 +13,7 @@
 	</parent>
 	<groupId>com.eric</groupId>
 	<artifactId>hello-spring-controller</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.4-RELEASE</version>
 	<name>hello-spring-controller</name>
 	<description>Demo project ASAE Spring Boot</description>
 	<properties>
@@ -25,20 +25,6 @@
 		<maven.compiler.target>20</maven.compiler.target>
 	</properties>
 
-	<repositories>
-
-		<!--
-			https
-		-->
-
-		<repository>
-			<id>spring-commerical</id>
-			<name>spring-commerical</name>
-			<url>https://nexus.azure.csp-si-tiger.net/repository/spring-commerical/</url>
-			<layout>default</layout>
-		</repository>
-
-	</repositories>
 
 	<dependencies>
 		<dependency>
@@ -72,7 +58,7 @@
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-jetty11</artifactId>
-			<version>1.10.14</version>
+			<version>1.10.13</version>
 
 			<!-- SpringCommPatched
             <version>1.10.14</version>
@@ -110,6 +96,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
+			<!--
 			<plugin>
 				<artifactId>exec-maven-plugin</artifactId>
 				<groupId>org.codehaus.mojo</groupId>
@@ -127,14 +114,17 @@
 					</execution>
 				</executions>
 			</plugin>
+			-->
 		</plugins>
 	</build>
 
 	<distributionManagement>
+
 		<repository>
 			<id>releases-nexus</id>
 			<url>https://nexus.azure.csp-si-tiger.net/repository/releases-nexus/</url>
 		</repository>
+
 
 	</distributionManagement>
 </project>
