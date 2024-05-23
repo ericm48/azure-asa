@@ -85,7 +85,7 @@ mvn clean install
 Deploy the app [ent]:
 ```
 az spring app deploy -n hello-spring-controller-jsp -s hello-spring-controller-ent -g azure-asa-uswest \
-   --artifact-path ./target/hello-spring-controller-0.0.1-SNAPSHOT.jar \
+   --artifact-path ./target/hello-spring-controller-jsp-0.0.8-RELEASE.war \
    --build-env BP_JVM_VERSION=17 \
    --verbose  &	
 ```
@@ -97,32 +97,32 @@ az spring app list  -s hello-spring-controller-ent -g azure-asa-uswest
 
 Get logs [ent]:
 ```
-az spring app logs -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest --lines 100 -f
+az spring app logs -n hello-spring-controller-jsp -s hello-spring-controller-ent -g azure-asa-uswest --lines 100 -f
 ```
 
 Hit the app [ent]:
 
 ```
-https://hello-spring-controller-ent-hello-spring-controller.azuremicroservices.io/showDateTime
+https://hello-spring-controller-ent-hello-spring-controller-jsp.azuremicroservices.io
 ```
 
 ```
-curl -v https://hello-spring-controller-ent-hello-spring-controller.azuremicroservices.io/showDateTime
+curl -v https://hello-spring-controller-ent-hello-spring-controller-jsp.azuremicroservices.io
 ```
 
 Scale the app [ent]:
 ```
-az spring app scale -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest --instance-count 3
+az spring app scale -n hello-spring-controller-jsp -s hello-spring-controller-ent -g azure-asa-uswest --instance-count 3
 ```
 
 Delete the app [ent]:
 ```
-az spring app delete -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest &
+az spring app delete -n hello-spring-controller-jsp -s hello-spring-controller-ent -g azure-asa-uswest &
 ```
 
 
 ## Notes:
--25-Sep-2023:  Updated to incorporate direnv.  Tailor the .envrc file to your own settings.
+-23-May-2024: -Initial Implementation.
 
 
 

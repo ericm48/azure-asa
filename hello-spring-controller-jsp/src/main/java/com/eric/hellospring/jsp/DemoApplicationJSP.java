@@ -13,11 +13,3 @@ public class DemoApplicationJSP {
 	}
 
 }
-//
-//@Controller
-//class HelloControllerJSP {
-//	@GetMapping("/")
-//	public String hello() {
-//		return "hello";
-//	}
-//}
