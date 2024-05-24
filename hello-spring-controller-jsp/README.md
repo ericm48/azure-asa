@@ -60,7 +60,7 @@ Set defaults (if not using direnv.  Otherwise direnv will set for you):
 . ../sh/setup-env-variables-jsb-ent.sh
 ```
 
-Create app within the service-instance [ent]. Note: Takes 10-15min to complete:
+Create app-slot within the service-instance [ent]. Note: Takes 10-15min to complete:
 ```
 az spring app create -n hello-spring-controller-jsp -s hello-spring-controller-ent \
 	 -g azure-asa-uswest --assign-endpoint true \
