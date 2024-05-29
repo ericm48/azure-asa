@@ -13,7 +13,7 @@
 	</parent>
 	<groupId>com.eric</groupId>
 	<artifactId>hello-spring-controller</artifactId>
-	<version>0.0.4-RELEASE</version>
+	<version>0.0.8-RELEASE</version>
 	<name>hello-spring-controller</name>
 	<description>Demo project ASAE Spring Boot</description>
 	<properties>
@@ -58,7 +58,7 @@
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-jetty11</artifactId>
-			<version>1.10.13</version>
+			<version>1.10.14</version>
 
 			<!-- SpringCommPatched
             <version>1.10.14</version>
@@ -120,10 +120,23 @@
 
 	<distributionManagement>
 
-		<repository>
-			<id>releases-nexus</id>
-			<url>https://nexus.azure.csp-si-tiger.net/repository/releases-nexus/</url>
-		</repository>
+        <repository>
+            <id>releases-nexus</id>
+
+            <url>http://nexus02.azure.csp-si-tiger.net/repository/releases-nexus/</url>
+
+            <!--
+            <url>https://nexus.azure.csp-si-tiger.net/repository/releases-nexus/</url>
+            <url>http://nexus02.azure.csp-si-tiger.net/repository/releases-nexus/</url>
+            -->
+
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+
+        </repository>
 
 
 	</distributionManagement>

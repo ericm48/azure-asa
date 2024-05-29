@@ -266,25 +266,15 @@ under the License.
       </properties>
     </profile>
     -->
-    
-	<profile>
-		<id>glassfish1</id>
-		<properties>
-			<glassfish.home>/apps/java/glassfish4</glassfish.home>
-		</properties>		
-	</profile>    
-    
 
 	<profile>
 		<id>GenDev</id>
-		
-	     <repositories>
+
+	    <repositories>
 
 	      	<!-- 
 	      		United States, St. Louis
 	      	-->
-
-
 	      	<repository>
 			     	<id>Central</id>
 			     	<name>Central</name>
@@ -316,60 +306,14 @@ under the License.
 				<layout>default</layout>
 			</repository>
 
-	     </repositories>		
+	    </repositories>
 	     
 	</profile>    
 
-    
   </profiles>
 
-  
   <activeProfiles>
-
 	<activeProfile>GenDev</activeProfile>
-
-	
   </activeProfiles>
-  
 
-  <distributionManagement>
-
-
-		 <!--
-		 https
-		 -->
-		 <!--
-	   <repository>
-				<id>releases-nexus</id>        
-				<url>https://nexus.azure.csp-si-tiger.net/repository/releases-nexus/</url>
-				
-				<releases>
-	      	<enabled>true</enabled>
-	        <updatePolicy>always</updatePolicy>
-	        <checksumPolicy>warn</checksumPolicy>
-	      </releases>			
-				
-	   </repository>
-			-->
-
-		 <!--
-		 http
-		 -->
-	   <repository>
-				<id>releases-nexus</id>        
-				<url>http://nexus02.azure.csp-si-tiger.net:8081/repository/releases-nexus/</url>
-				
-				<releases>
-	      	<enabled>true</enabled>
-	        <updatePolicy>always</updatePolicy>
-	        <checksumPolicy>warn</checksumPolicy>
-	      </releases>			
-				
-	   </repository>
-
-  	
-  </distributionManagement>  
-
-  
-  
 </settings>
