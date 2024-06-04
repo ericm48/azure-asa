@@ -55,19 +55,6 @@
 			<version>3.1.4</version>
 		</dependency>
 		-->
-		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-jetty11</artifactId>
-			<version>1.10.14</version>
-
-			<!-- SpringCommPatched
-            <version>1.10.14</version>
-            -->
-
-			<!-- Regular Version
-            <version>1.10.13</version>
-            -->
-		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -96,48 +83,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-			<!--
-			<plugin>
-				<artifactId>exec-maven-plugin</artifactId>
-				<groupId>org.codehaus.mojo</groupId>
-				<version>1.6.0</version>
-				<executions>
-					<execution>
-						<id>Run Script</id>
-						<phase>initialize</phase>
-						<goals>
-							<goal>exec</goal>
-						</goals>
-						<configuration>
-							<executable>./sh/addCerts.sh</executable>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			-->
+
 		</plugins>
 	</build>
 
-	<distributionManagement>
-
-        <repository>
-            <id>releases-nexus</id>
-
-            <url>http://nexus02.azure.csp-si-tiger.net/repository/releases-nexus/</url>
-
-            <!--
-            <url>https://nexus.azure.csp-si-tiger.net/repository/releases-nexus/</url>
-            <url>http://nexus02.azure.csp-si-tiger.net/repository/releases-nexus/</url>
-            -->
-
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>warn</checksumPolicy>
-            </releases>
-
-        </repository>
-
-
-	</distributionManagement>
 </project>
