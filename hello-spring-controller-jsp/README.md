@@ -4,6 +4,8 @@
 Azure Spring Apps Enterprise Projects
 
 Please note:
+* This demo uses a specific maven settings.xml, referred to below.  Make sure all mvn commands reference this setting.xml.
+* This demo will deploy a spring boot jsp app with a special dependency (from spring-commerical) repo. 
 * Several commands are run in the background using the '&'.  You may wish to NOT do this.  Just be aware of what you are doing.
 * Below are example commands for the ENTERPRISE Tier.  
 * 25-Sept-2023: This setup has integrated [direnv](https://direnv.net). for managing environment variables & Azure Defaults.  Please see the .envrc file(s), customize to your needs.
@@ -74,12 +76,27 @@ az spring app list  -s hello-spring-controller-ent -g azure-asa-uswest
 
 Invoke maven build:
 ```
-m3ast
+m3ast --settings ./mvn/settings.xml 
 ```
 or
 
 ```
-mvn clean install
+mvn clean install  --settings ./mvn/settings.xml 
+```
+
+
+Show micrometer dependency [ currently version: 1.10.15 ]:
+```
+m3dl --settings ./mvn/settings.xml |grep micro
+```
+or
+```
+mvn dependency:list  --settings ./mvn/settings.xml |grep micro
+```
+
+Shows the dependency fullfilled by spring-commerical repo (ie not maven central):
+```
+io.micrometer:micrometer-jetty11:pom:1.10.15:compile
 ```
 
 Deploy the app [ent]:
@@ -122,6 +139,7 @@ az spring app delete -n hello-spring-controller-jsp -s hello-spring-controller-e
 
 
 ## Notes:
+-02-Jul-2024: -Updated for Nexus Proxy for spring-commercial.
 -23-May-2024: -Initial Implementation.
 
 

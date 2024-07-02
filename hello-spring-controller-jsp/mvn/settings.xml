@@ -304,17 +304,18 @@ under the License.
 			     	<url>https://nexus.azure.csp-si-tiger.net/repository/spring-commerical/</url>
 		        <layout>default</layout>
 	        </repository>
-			-->
-
+            -->
 			<!--
 				http
 			-->
+
 			<repository>
 				<id>spring-commerical</id>
 				<name>spring-commerical</name>
 				<url>http://nexus02.azure.csp-si-tiger.net:8081/repository/spring-commerical/</url>
 				<layout>default</layout>
 			</repository>
+
 
 	     </repositories>		
 	     
