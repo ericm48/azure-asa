@@ -99,7 +99,17 @@ Shows the dependency fullfilled by spring-commerical repo (ie not maven central)
 io.micrometer:micrometer-jetty11:pom:1.10.15:compile
 ```
 
-Deploy the app [ent]:
+To complete a maven release [ deploy ]:
+```
+m3 clean deploy --settings ./mvn/settings.xml  -Dmaven.test.skip=true
+```
+or
+```
+mvn clean deploy --settings ./mvn/settings.xml  -Dmaven.test.skip=true
+```
+
+
+Deploy the app to ASAE [ent]:
 ```
 az spring app deploy -n hello-spring-controller-jsp -s hello-spring-controller-ent -g azure-asa-uswest \
    --artifact-path ./target/hello-spring-controller-jsp-0.0.8-RELEASE.war \
