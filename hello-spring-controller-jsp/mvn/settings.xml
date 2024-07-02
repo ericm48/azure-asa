@@ -329,48 +329,7 @@ under the License.
 
 	<activeProfile>GenDev</activeProfile>
 
-	
   </activeProfiles>
-  
-
-  <distributionManagement>
 
 
-		 <!--
-		 https
-		 -->
-		 <!--
-	   <repository>
-				<id>releases-nexus</id>        
-				<url>https://nexus.azure.csp-si-tiger.net/repository/releases-nexus/</url>
-				
-				<releases>
-	      	<enabled>true</enabled>
-	        <updatePolicy>always</updatePolicy>
-	        <checksumPolicy>warn</checksumPolicy>
-	      </releases>			
-				
-	   </repository>
-			-->
-
-		 <!--
-		 http
-		 -->
-	   <repository>
-				<id>releases-nexus</id>        
-				<url>http://nexus02.azure.csp-si-tiger.net:8081/repository/releases-nexus/</url>
-				
-				<releases>
-	      	<enabled>true</enabled>
-	        <updatePolicy>always</updatePolicy>
-	        <checksumPolicy>warn</checksumPolicy>
-	      </releases>			
-				
-	   </repository>
-
-  	
-  </distributionManagement>  
-
-  
-  
 </settings>
