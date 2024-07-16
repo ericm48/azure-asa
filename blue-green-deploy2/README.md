@@ -81,6 +81,11 @@ az spring app deployment delete --app app-cyan2 -n default \
    --verbose &
 ```
 
+Set Java to v17 [ent]:
+```
+sdk use java 17.0.11-librca
+```
+
 Build Blue App, Invoke maven build:
 ```
 cd blue

@@ -72,6 +72,11 @@ Verify the app [ent]:
 az spring app list  -s hello-spring-controller-ent -g azure-asa-uswest
 ```
 
+Set Java to v17 [ent]:
+```
+sdk use java 17.0.11-librca
+```
+
 Invoke maven build:
 ```
 m3ast
