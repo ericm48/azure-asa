@@ -113,11 +113,13 @@ or
 mvn clean install
 ```
 
+Blue App:
 
-Deploy Blue App:
 ```
 cd ../blue
 ```
+
+Deploy Blue App from .jar:
 
 ```
 az spring app deployment create -n spring-controller-blue -s demo-blue-green-ent2 -g azure-asa-uswest \
@@ -127,15 +129,37 @@ az spring app deployment create -n spring-controller-blue -s demo-blue-green-ent
    --verbose &
 ```
 
-Deploy Green App:
+Deploy Blue App from source:
+
+```
+az spring app deployment create -n spring-controller-blue -s demo-blue-green-ent2 -g azure-asa-uswest \
+   --app app-cyan2 \
+   --source-path . \
+   --build-env BP_JVM_VERSION=17 \
+   --verbose &
+```
+
+Green App:
 ```
 cd ../green
 ```
+
+Deploy Green App from .jar:
 
 ```
 az spring app deployment create -n spring-controller-green -s demo-blue-green-ent2 -g azure-asa-uswest \
    --app app-cyan2 \
    --artifact-path ./target/hello-spring-controller-green-0.0.7-SNAPSHOT.jar \
+   --build-env BP_JVM_VERSION=17 \
+   --verbose &
+```
+
+Deploy Green App from source:
+
+```
+az spring app deployment create -n spring-controller-green -s demo-blue-green-ent2 -g azure-asa-uswest \
+   --app app-cyan2 \
+   --source-path . \
    --build-env BP_JVM_VERSION=17 \
    --verbose &
 ```
