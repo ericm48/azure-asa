@@ -87,12 +87,21 @@ or
 mvn clean install
 ```
 
-Deploy the app [ent]:
+Deploy the app from .jar [ent]:
 ```
 az spring app deploy -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest \
    --artifact-path ./target/hello-spring-controller-0.0.8-RELEASE.jar \
    --build-env BP_JVM_VERSION=17 \
    --verbose  &	
+```
+
+Deploy the app from source [ent]:
+```
+
+az spring app deploy -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest \
+   --source-path . \
+   --build-env BP_JVM_VERSION=17 \
+   --verbose  &   
 ```
 
 List the app [ent]:
