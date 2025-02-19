@@ -28,7 +28,7 @@ Verify correct subscription:
 az account set --subscription ...
 ```
 
-Set defaults (if not using direnv.  Otherwise direnv will set for you):
+Set defaults (if not using direnv.  Otherwise direnv will set it for you):
 ```
 source ../sh/setup-env-variables-bg-ent2.sh
 ```
@@ -57,7 +57,7 @@ Goto proper directory:
 cd ./blue-green-deploy2
 ```
 
-Set defaults (if not using direnv.  Otherwise direnv will set for you):
+Set defaults (if not using direnv.  Otherwise direnv will set it for you):
 ```
 source ../sh/setup-env-variables-bg-ent2.sh
 ```
@@ -74,17 +74,15 @@ Verify the app:
 az spring app list  -s demo-blue-green-ent2 -g azure-asa-uswest -o table
 ```
 
-Delete the DEFAULT deployment [yes you must do this!]: 
-```
-az spring app deployment delete --app app-cyan2 -n default \
-   -s demo-blue-green-ent2 -g azure-asa-uswest \
-   --verbose &
-```
-
-Set Java to v17 [ent]:
+Set Java to v17 locally [ent]:
 ```
 sdk use java 17.0.11-librca
 ```
+
+Set Java to v17 on app-instance:
+
+
+
 
 Build Blue App, Invoke maven build:
 ```
@@ -125,7 +123,6 @@ Deploy Blue App from .jar:
 az spring app deployment create -n spring-controller-blue -s demo-blue-green-ent2 -g azure-asa-uswest \
    --app app-cyan2 \
    --artifact-path ./target/hello-spring-controller-blue-0.0.5-SNAPSHOT.jar \
-   --build-env BP_JVM_VERSION=17 \
    --verbose &
 ```
 
@@ -135,7 +132,13 @@ Deploy Blue App from source:
 az spring app deployment create -n spring-controller-blue -s demo-blue-green-ent2 -g azure-asa-uswest \
    --app app-cyan2 \
    --source-path . \
-   --build-env BP_JVM_VERSION=17 \
+   --verbose &
+```
+
+Delete the DEFAULT deployment [yes you must do this!]: 
+```
+az spring app deployment delete --app app-cyan2 -n default \
+   -s demo-blue-green-ent2 -g azure-asa-uswest \
    --verbose &
 ```
 
@@ -150,7 +153,6 @@ Deploy Green App from .jar:
 az spring app deployment create -n spring-controller-green -s demo-blue-green-ent2 -g azure-asa-uswest \
    --app app-cyan2 \
    --artifact-path ./target/hello-spring-controller-green-0.0.7-SNAPSHOT.jar \
-   --build-env BP_JVM_VERSION=17 \
    --verbose &
 ```
 
@@ -160,7 +162,6 @@ Deploy Green App from source:
 az spring app deployment create -n spring-controller-green -s demo-blue-green-ent2 -g azure-asa-uswest \
    --app app-cyan2 \
    --source-path . \
-   --build-env BP_JVM_VERSION=17 \
    --verbose &
 ```
 
@@ -255,6 +256,12 @@ az spring app delete -n app-cyan2 -s demo-blue-green-ent2 -g azure-asa-uswest &
 
 
 ## Notes:
+-19-Feb-2025:  -Corrected steps for Blue/Green Deploys.
+               -Removed --build-env switch as this is no longer supported.
+               -Updated grammer.
+
+-25-Sep-2023:  -Updated to incorporate direnv.  Tailor the .envrc file to your own settings.
+-05-Jan-2023:  -Initial Impl.
 
 
 

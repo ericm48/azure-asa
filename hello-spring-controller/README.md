@@ -26,7 +26,7 @@ Verify correct subscription:
 az account set --subscription ...
 ```
 
-Set defaults (if not using direnv.  Otherwise direnv will set for you):
+Set defaults (if not using direnv.  Otherwise direnv will set it for you):
 ```
 . ../sh/setup-env-variables-jsb-ent.sh
 ```
@@ -55,7 +55,7 @@ Goto proper directory:
 cd ./hello-spring-controller
 ```
 
-Set defaults (if not using direnv.  Otherwise direnv will set for you):
+Set defaults (if not using direnv.  Otherwise direnv will set it for you):
 ```
 . ../sh/setup-env-variables-jsb-ent.sh
 ```
@@ -91,7 +91,6 @@ Deploy the app from .jar [ent]:
 ```
 az spring app deploy -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest \
    --artifact-path ./target/hello-spring-controller-0.0.8-RELEASE.jar \
-   --build-env BP_JVM_VERSION=17 \
    --verbose  &	
 ```
 
@@ -100,7 +99,6 @@ Deploy the app from source [ent]:
 
 az spring app deploy -n hello-spring-controller -s hello-spring-controller-ent -g azure-asa-uswest \
    --source-path . \
-   --build-env BP_JVM_VERSION=17 \
    --verbose  &   
 ```
 
@@ -136,7 +134,10 @@ az spring app delete -n hello-spring-controller -s hello-spring-controller-ent -
 
 
 ## Notes:
--25-Sep-2023:  Updated to incorporate direnv.  Tailor the .envrc file to your own settings.
+-19-Feb-2025:  -Updated grammer.
+               -Removed --build-env switch as this is no longer supported.
+-25-Sep-2023:  -Updated to incorporate direnv.  Tailor the .envrc file to your own settings.
+-05-Jan-2023:  -Initial Impl.
 
 
 
