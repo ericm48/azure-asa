@@ -97,26 +97,6 @@ or
 mvn clean install
 ```
 
-Build Green App, Invoke maven build:
-```
-cd ../green
-```
-
-```
-m3ast
-```
-or
-
-```
-mvn clean install
-```
-
-Blue App:
-
-```
-cd ../blue
-```
-
 Deploy Blue App from .jar:
 
 ```
@@ -130,36 +110,6 @@ Deploy Blue App from source:
 
 ```
 az spring app deployment create -n spring-controller-blue -s demo-blue-green-ent2 -g azure-asa-uswest \
-   --app app-cyan2 \
-   --source-path . \
-   --verbose &
-```
-
-Delete the DEFAULT deployment [yes you must do this!]: 
-```
-az spring app deployment delete --app app-cyan2 -n default \
-   -s demo-blue-green-ent2 -g azure-asa-uswest \
-   --verbose &
-```
-
-Green App:
-```
-cd ../green
-```
-
-Deploy Green App from .jar:
-
-```
-az spring app deployment create -n spring-controller-green -s demo-blue-green-ent2 -g azure-asa-uswest \
-   --app app-cyan2 \
-   --artifact-path ./target/hello-spring-controller-green-0.0.7-SNAPSHOT.jar \
-   --verbose &
-```
-
-Deploy Green App from source:
-
-```
-az spring app deployment create -n spring-controller-green -s demo-blue-green-ent2 -g azure-asa-uswest \
    --app app-cyan2 \
    --source-path . \
    --verbose &
@@ -195,6 +145,45 @@ curl -v https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/
 
 ```
 curl -v https://demo-blue-green-ent2-app-cyan2.azuremicroservices.io/showDateTime
+```
+
+Delete the DEFAULT deployment [yes you must do this!]: 
+```
+az spring app deployment delete --app app-cyan2 -n default \
+   -s demo-blue-green-ent2 -g azure-asa-uswest \
+   --verbose &
+```
+
+Build Green App, Invoke maven build:
+```
+cd ../green
+```
+
+```
+m3ast
+```
+or
+
+```
+mvn clean install
+```
+
+Deploy Green App from .jar:
+
+```
+az spring app deployment create -n spring-controller-green -s demo-blue-green-ent2 -g azure-asa-uswest \
+   --app app-cyan2 \
+   --artifact-path ./target/hello-spring-controller-green-0.0.7-SNAPSHOT.jar \
+   --verbose &
+```
+
+Deploy Green App from source:
+
+```
+az spring app deployment create -n spring-controller-green -s demo-blue-green-ent2 -g azure-asa-uswest \
+   --app app-cyan2 \
+   --source-path . \
+   --verbose &
 ```
 
 Make Active Green App:
