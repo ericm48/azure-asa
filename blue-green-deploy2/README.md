@@ -81,7 +81,20 @@ sdk use java 17.0.11-librca
 
 Set Java to v17 on app-instance:
 
+-From the Left-Nav, Navigate to the apps section, locate the app, notice the java version setting:
+![Alt text](./media/ChangeJavaVersion1.jpg?raw=true "Step 1")
 
+-Select the Configuration Setting.
+![Alt text](./media/ChangeJavaVersion2.jpg?raw=true "Step 2")
+
+-Locate The Java Version Setting, Hit the DropDown, select Java 17.
+![Alt text](./media/ChangeJavaVersion3.jpg?raw=true "Step 3")
+
+-Once you've selected Java 17, Hit the "Save" button.
+![Alt text](./media/ChangeJavaVersion4.jpg?raw=true "Step 4")
+
+-In a couple of seconds you should see it is successfully saved.
+![Alt text](./media/ChangeJavaVersion5.jpg?raw=true "Step 5")
 
 
 Build Blue App, Invoke maven build:
