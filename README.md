@@ -1,5 +1,5 @@
 
-# Welcome to the Azure Git Repo! 
+# Welcome to the Azure Spring Apps Enterprise Git Repo! 
 
 This repo contains artifacts for Azure Spring Apps Projects.
 
