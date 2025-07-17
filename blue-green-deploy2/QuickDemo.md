@@ -34,4 +34,7 @@ az spring app set-deployment -n app-cyan2 \
 az spring app logs -n app-cyan2 -s demo-blue-green-ent2 -g azure-asa-uswest --lines 100 -f
 ```
 
-
+## Delete The App:
+```
+az spring app delete -n app-cyan2 -s demo-blue-green-ent2 -g azure-asa-uswest &
+```
