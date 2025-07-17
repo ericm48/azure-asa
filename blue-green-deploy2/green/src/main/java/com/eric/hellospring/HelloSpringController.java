@@ -19,7 +19,7 @@ public class HelloSpringController
         methIDgetCurrentDateTime    = LogFactory.getLog(HelloSpringController.class.getName() + ".getCurrentDateTime()");
     }
 
-    public static final String version = "0.0.7-SNAPSHOT";
+    public static final String version = "-0.0.7-SNAPSHOT";
     @RequestMapping("/showDateTime")
     public String showDateTime()
     {

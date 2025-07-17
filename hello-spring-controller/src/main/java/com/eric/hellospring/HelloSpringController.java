@@ -30,7 +30,7 @@ public class HelloSpringController
         logger.debug("Begins...");
 
         dateTime = "No-DateTime-Ready";
-        dateTime = getCurrentDateTime();
+        //dateTime = getCurrentDateTime();
 
         returnValue = returnValue + " " + dateTime;
         logger.info("returnValueBe: " + returnValue);

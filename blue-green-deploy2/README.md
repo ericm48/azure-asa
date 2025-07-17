@@ -76,7 +76,7 @@ az spring app list  -s demo-blue-green-ent2 -g azure-asa-uswest -o table
 
 Set Java to v17 locally [ent]:
 ```
-sdk use java 17.0.11-librca
+sdk use java 17.0.14-librca
 ```
 
 Set Java to v17 on app-instance:
